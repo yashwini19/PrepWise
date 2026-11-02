@@ -1,0 +1,139 @@
+.prediction-page {
+  width: 100%;
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  color: var(--text-primary, #263a35);
+}
+
+.prediction-heading {
+  margin-bottom: 26px;
+}
+
+.prediction-eyebrow {
+  color: #648e7d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.prediction-heading h1 {
+  margin: 8px 0;
+  font-size: clamp(28px, 5vw, 40px);
+}
+
+.prediction-heading > p:last-child {
+  line-height: 1.7;
+  color: var(--text-secondary, #64756f);
+}
+
+.prediction-card {
+  padding: 28px;
+  border: 1px solid var(--border-color, rgba(130, 160, 150, 0.25));
+  border-radius: 24px;
+  background: var(--card-bg, rgba(220, 242, 233, 0.35));
+  box-shadow: var(--card-shadow, 0 12px 35px rgba(60, 90, 80, 0.08));
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+
+.prediction-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.prediction-grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 650;
+}
+
+.prediction-grid input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px;
+  border: 1px solid var(--border-color, #cbdcd4);
+  border-radius: 12px;
+  background: var(--input-bg, rgba(255, 255, 255, 0.8));
+  color: var(--text-primary, #263a35);
+  font: inherit;
+}
+
+.prediction-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 24px 0;
+  font-size: 14px;
+}
+
+.prediction-checkbox input {
+  width: 17px;
+  height: 17px;
+  accent-color: #689d85;
+}
+
+.prediction-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 13px;
+  background: linear-gradient(110deg, #9be3c8, #c9b9f5);
+  color: #263a35;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.prediction-button:hover {
+  transform: translateY(-2px);
+}
+
+.prediction-button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.prediction-error {
+  margin-top: 18px;
+  color: #b42318;
+}
+
+.prediction-result {
+  margin-top: 25px;
+  padding: 22px;
+  border-radius: 18px;
+  background: rgba(255, 228, 155, 0.4);
+  text-align: center;
+  overflow-wrap: anywhere;
+}
+
+.prediction-result > p:first-child {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.prediction-result h2 {
+  margin: 12px 0;
+  font-size: 38px;
+}
+
+.prediction-result small {
+  display: block;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .prediction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .prediction-card {
+    padding: 20px;
+  }
+}

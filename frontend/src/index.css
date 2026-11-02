@@ -1,0 +1,189 @@
+
+.study-analytics {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+  color: var(--text-primary);
+}
+
+.analytics-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.analytics-header h2 {
+  margin: 0 0 8px;
+  font-size: 27px;
+}
+
+.analytics-header p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.analytics-header button {
+  padding: 11px 17px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.analytics-header button:hover {
+  transform: translateY(-2px);
+}
+
+.analytics-error {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(220, 70, 70, 0.1);
+  color: #d9534f;
+}
+
+.analytics-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.analytics-card,
+.analytics-progress,
+.analytics-performance {
+  padding: 23px;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow);
+}
+
+.analytics-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.analytics-card > span {
+  font-size: 25px;
+}
+
+.analytics-card h3 {
+  margin: 0;
+  font-size: 27px;
+  color: var(--text-primary);
+}
+
+.analytics-card p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.analytics-progress h3,
+.analytics-performance h3 {
+  margin: 0 0 24px;
+  font-size: 19px;
+}
+
+.progress-item {
+  margin-bottom: 23px;
+}
+
+.progress-item:last-child {
+  margin-bottom: 0;
+}
+
+.progress-item > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.progress-item span {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+.progress-item strong {
+  color: var(--text-primary);
+  font-size: 14px;
+}
+
+.analytics-progress-track {
+  width: 100%;
+  height: 11px;
+  overflow: hidden;
+  border-radius: 20px;
+  background: var(--border-color);
+}
+
+.analytics-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #9de7d1, #b9a1ed);
+  transition: width 0.5s ease;
+}
+
+.analytics-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.analytics-metric-grid > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 9px;
+  padding: 20px 12px;
+  border-radius: 16px;
+  background: var(--inner-card-bg, rgba(160, 140, 220, 0.09));
+}
+
+.analytics-metric-grid strong {
+  font-size: 24px;
+  color: var(--text-primary);
+}
+
+.analytics-metric-grid span {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.analytics-performance > p {
+  color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+  .analytics-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 650px) {
+  .analytics-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .analytics-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .analytics-metric-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .analytics-card,
+  .analytics-progress,
+  .analytics-performance {
+    padding: 17px;
+  }
+}

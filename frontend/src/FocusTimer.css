@@ -1,0 +1,200 @@
+.focus-page {
+  padding: 26px;
+  color: var(--text-color, #33334b);
+}
+
+.focus-heading {
+  margin-bottom: 25px;
+}
+
+.focus-heading > span {
+  color: #8b79c9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.focus-heading h1 {
+  font-size: clamp(25px, 4vw, 34px);
+  margin: 9px 0;
+}
+
+.focus-heading p {
+  color: var(--muted-text, #77778e);
+  font-size: 14px;
+}
+
+.focus-card,
+.focus-session-card {
+  background: var(--card-bg, rgba(255, 255, 255, 0.82));
+  border: 1px solid var(--card-border, rgba(160, 145, 200, 0.2));
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 8px 25px rgba(90, 75, 130, 0.06);
+  margin-bottom: 22px;
+}
+
+.focus-card {
+  max-width: 650px;
+  margin: 0 auto 22px;
+  text-align: center;
+}
+
+.focus-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.focus-tabs button {
+  padding: 11px 20px;
+  border: 1px solid #e6e0f1;
+  border-radius: 20px;
+  background: transparent;
+  color: var(--text-color, #55556c);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.focus-tabs button.selected {
+  background: #eae3ff;
+  color: #806ac2;
+  border-color: #d5c8fa;
+}
+
+.timer-circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  margin: 0 auto 28px;
+}
+
+.timer-inner {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: var(--card-bg, #fff);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer-mode {
+  color: #8b79c9;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.timer-inner h2 {
+  font-size: 49px;
+  margin: 12px 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.timer-caption {
+  color: var(--muted-text, #77778e);
+  font-size: 12px;
+}
+
+.timer-controls {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.timer-controls button {
+  padding: 13px 27px;
+  border: none;
+  border-radius: 13px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.start-button {
+  color: white;
+  background: linear-gradient(110deg, #9d8ae1, #76cdb8);
+}
+
+.reset-button {
+  color: var(--text-color, #55556c);
+  background: var(--soft-card, #f1edfa);
+}
+
+.focus-tip {
+  margin: 25px 0 0;
+  color: var(--muted-text, #77778e);
+  font-size: 13px;
+}
+
+.focus-session-card {
+  max-width: 650px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.session-icon {
+  width: 60px;
+  height: 60px;
+  display: grid;
+  place-items: center;
+  background: #fff1cf;
+  border-radius: 18px;
+  font-size: 28px;
+  flex-shrink: 0;
+}
+
+.focus-session-card span {
+  color: #8b79c9;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+.focus-session-card h2 {
+  margin: 5px 0;
+  font-size: 27px;
+}
+
+.focus-session-card p {
+  color: var(--muted-text, #77778e);
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .focus-page {
+    padding: 15px;
+  }
+
+  .focus-card,
+  .focus-session-card {
+    padding: 20px;
+  }
+
+  .timer-circle {
+    width: 220px;
+    height: 220px;
+  }
+
+  .timer-inner {
+    width: 192px;
+    height: 192px;
+  }
+
+  .timer-inner h2 {
+    font-size: 42px;
+  }
+
+  .focus-tabs button {
+    padding: 10px 13px;
+    font-size: 12px;
+  }
+}
